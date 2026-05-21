@@ -26,7 +26,7 @@ VALID_DDDS = {
     "91", "92", "93", "94", "95", "96", "97", "98", "99",
 }
 COURSE_INFO = {
-    "local": "CORREDOR ESPORTIVO",
+    "local": "CORREDOR ESPORTIVO DO MONERÓ",
     "curso": "DANÇANDO NA PRAÇA",
     "turma": "Dançando na Praça",
     "horario": "Domingo | 17h",
@@ -628,6 +628,8 @@ TEMPLATE_WIZARD = r'''
                                         <span class="info-item">AULÃO COM TODOS OS RITMOS</span>
                                         <span class="info-item" style="display:none;">EM CASO DE CHUVA SERÁ CANCELADO</span>
                                         <span class="info-item" style="display:none;">VAGAS LIMITADAS, GARANTA A SUA!</span>
+                                        <span class="info-item" style="display:none;">AULÃO COM ANGÉLICA & LEANDRO AZEVEDO
+</span>
                                     </span>
                                 </div>
                             </div>
@@ -744,10 +746,8 @@ TEMPLATE_WIZARD = r'''
                             </div>
                             <div class="form-group full">
                                 <label for="endereco_curso">Endereço</label>
-                                <div class="input-with-action">
-                                    <input type="text" id="endereco_curso" name="endereco_curso" class="readonly-field" readonly value="{{ course_info.endereco_curso }}">
-                                    <button type="button" class="icon-button" id="btn-copiar-endereco" title="Copiar endereço">COPIAR 📋</button>
-                                </div>
+                                <input type="text" id="endereco_curso" name="endereco_curso" class="readonly-field" readonly value="{{ course_info.endereco_curso }}">
+                                <button type="button" class="icon-button" id="btn-copiar-endereco" title="Copiar endereço" style="width:100%;min-height:38px;height:38px;border-radius:10px;margin-top:6px;font-size:1rem;">COPIAR 📋</button>
                             </div>
                         </div>
                         <div class="panel-actions">
@@ -1413,3 +1413,4 @@ def confirmacao():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+    
